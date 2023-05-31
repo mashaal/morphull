@@ -6,10 +6,22 @@ import Controls from '../components/Controls.astro';
 
 <Layout title="Node">
 	<main>
-		<h1>Native module resolution vs Node module resolution</h1>
-    <picture>
-      <img src="https://i.redd.it/tfugj4n3l6ez.png">
-    </picture>
+		<h1>Differences with package.json</h1>
+    <h2>package.json</h2>
+    <Code code={`{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+  },
+}`} lang="json" theme="dracula"/>
+
+<h2>importmap.json</h2>
+<Code code={`{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+  }
+}`} lang="json" theme="dracula" />
   </main>
-  <Controls href="why" />
+  <Controls href="deno-2" />
 </Layout>
