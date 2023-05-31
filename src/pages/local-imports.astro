@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Slide.astro';
+import { Code } from 'astro/components';
+import Controls from '../components/Controls.astro';
+---
+
+<Layout title="Using ES Modules in browser">
+	<main>
+		<h1>Using ES Modules in Browser</h1>
+    
+    <Code code={`// library.js
+export const example = function () {
+  console.log("hello world");
+};`} lang="js" theme="dracula" />
+    <Code code={`<script type="module" src="main.js"></script>`} lang="js" theme="dracula" />
+    <Code code={`// main.js
+import { example } from "./library.js";
+
+example();
+`} lang="js" theme="dracula" />
+  </main>
+  <Controls href="rails.html" />
+</Layout>

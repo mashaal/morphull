@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Slide.astro';
+import { Code } from 'astro/components';
+import Controls from '../components/Controls.astro';
+---
+
+<Layout title="Why">
+	<main>
+		<h1>Why is this cool?</h1>
+    <ol style="margin-top:2em">
+      <li>This allows you to both write and ship applications in modern js.</li>
+      <li>Your tooling/build chain can be heavily reduced.</li>
+      <li>No bundling is required!</li>
+      <li>Source code and dependencies can be dynamically loaded as needed!</li>
+    </ol>
+  </main>
+  <Controls href="example.html" />
+</Layout>

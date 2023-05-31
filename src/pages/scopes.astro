@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Slide.astro';
+import { Code } from 'astro/components';
+import Controls from '../components/Controls.astro';
+---
+
+<Layout title="Scopes">
+	<main>
+		<h1>Scopes</h1>
+    <p>Scopes allows different versions of the module to be used depending on what code is doing the importing.</p>
+    <Code code={`<script type="importmap">
+  {
+    "imports": {
+      "square": "./module/shapes/square.js"
+    },
+    "scopes": {
+      "/modules/customshapes/": {
+        "square": "https://example.com/modules/shapes/square.js"
+      }
+    }
+  }
+</script>`} lang="html" theme="dracula" />
+  </main>
+  <Controls href="why.html" />
+</Layout>

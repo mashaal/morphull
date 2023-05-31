@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Slide.astro';
+import { Code } from 'astro/components';
+import Controls from '../components/Controls.astro';
+---
+
+<Layout title="Things">
+	<main>
+		<h1>Legacy Code Splitting</h1>
+    <p>Many frameworks and bundlers have a feature known as 'code-splitting'</p>
+    <Code code={`<script src="x123-common.bundle.js"></script>
+<script src="y456-video-player.bundle.js"></script>`} lang="js" theme="dracula" />
+  <p>This is done as an optimisation to try and limit bundled javascript between routes, templates, or sections of your application.</p>
+  </main>
+  <Controls href="code-splitting-2.html" />
+</Layout>

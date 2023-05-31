@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Slide.astro';
+import { Code } from 'astro/components';
+import Controls from '../components/Controls.astro';
+---
+
+<Layout title="Things">
+	<main>
+		<h1>NPM + ESM CDNs</h1>
+    <p>The current state of the NPM ecosytem is still split across CommonJS and ESM, and can be a very frustrating experience, to say the least.</p>
+    <p>New tooling is available that bridges the gap, and allows usage of much of the NPM ecosystem, free to import via Import Maps via CDN's</p>
+  </main>
+  <Controls href="cdns.html" />
+</Layout>
