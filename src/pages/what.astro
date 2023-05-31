@@ -10,9 +10,12 @@ import Controls from '../components/Controls.astro';
     <p>Import Maps allow usage of bare specifiers across your ESM codebase.</p>
     <Code code={`{
   "imports": {
-    "react": "https://esm.sh/react"
+    "react": "https://esm.sh/react",
+    "app": "/src/app.js"
   }
 }`} lang="json" theme="dracula" />
+<p>Bare specifiers can point to local source code or urls.</p>
   </main>
+  
   <Controls href="why" />
 </Layout>
