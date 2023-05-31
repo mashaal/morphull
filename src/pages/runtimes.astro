@@ -3,7 +3,7 @@ import Layout from '../layouts/Slide.astro';
 import Controls from '../components/Controls.astro';
 ---
 
-<Layout title="Runtimes" animation="slide">
+<Layout title="Runtimes">
   <main>
     <header>
       <h1>Runtime Support</h1>
@@ -22,27 +22,5 @@ import Controls from '../components/Controls.astro';
     <h4>Bun: <span>❌ Not planned</span></h4>
    
   </main>
-  <Controls href="index.html" />
+  <Controls href="rails.html" />
 </Layout>
-
-<style>
-  html:not([data-view-transition-direction="reload"])[data-view-transition="slide"] {
-    &::view-transition-new(root) {
-      animation: var(--animation-slide-in-left) forwards;
-    }
-
-    &::view-transition-old(root) {
-      animation: var(--animation-slide-out-left) forwards;
-    }
-
-    &[data-view-transition-direction="back"] {
-      &::view-transition-new(root) {
-        animation: var(--animation-slide-in-right) forwards;
-      }
-
-      &::view-transition-old(root) {
-        animation: var(--animation-slide-out-right) forwards;
-      }
-    }
-  }
-</style>
