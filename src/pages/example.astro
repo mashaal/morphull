@@ -11,14 +11,15 @@ import Controls from '../components/Controls.astro';
     <Code code={`<script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react"
+    "micromark": "https://esm.sh/micromark"
   }
 }
 </script>
 
 <script type="module">
-  import react from 'react';
-  console.log(react);
+  import {micromark} from 'micromark'
+
+  console.log(micromark('## Hello, *world*!'))
 </script>`} lang="html" theme="dracula" />
   </main>
   <Controls href="scopes" />
