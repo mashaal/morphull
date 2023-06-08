@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Slide.astro';
+import { Code } from 'astro/components';
+import Controls from '../components/Controls.astro';
+---
+
+<Layout title="Catching up">
+	<main>
+		<h1>Catching up on common ESM pitfalls</h1>
+    <picture>
+      <img src="/pitfall.gif" width="800" style="margin-bottom:0">
+    </picture>
+    <h4>Dual package hazard</h4>
+    <p>Shipping both CJS and ESM can result in your codebase/bundler including multiple copies of the same code.</p>
+    <h4>Inconsistent package standards</h4>
+    <p>Libraries can ship any combination of CJS, ESM, or both.</p>
+    <h4>JS runtimes, bundlers, and frameworks commonly promote non-standards</h4>
+    <p>Choose your libraries and tooling very carefully.</p>
+  </main>
+  <Controls href="deno" />
+</Layout>

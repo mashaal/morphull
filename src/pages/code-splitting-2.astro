@@ -10,10 +10,19 @@ import Controls from '../components/Controls.astro';
     <p>Using ESM and import maps allow souce code and modules to be loaded dynamically, as needed.</p>
     <p>Specifiers in your importmap are not downloaded/parsed until imported in your source code.</p>
     <p>This can be combined with concepts such a "Suspense" and "Lazy Loading" offered by libraries like React.</p>
-    <Code code={`import React, { Suspense } from 'react';
+    <Code code={`import { lazy, Suspense } from 'react';
 
-const OtherComponent = React.lazy(() => import('./OtherComponent.js'));
-`} lang="js" theme="dracula" />
+const OtherComponent = lazy(() => import('./OtherComponent.jsx'));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}`} lang="js" theme="dracula" />
     
   </main>
   <Controls href="browser-support" />
